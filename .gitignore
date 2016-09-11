@@ -19,3 +19,6 @@
 # Ignore Secrets
 *secrets.yml
 *applicaiton.yml
+
+# Temporary images
+public/system/posts/*

@@ -10,5 +10,7 @@
 		<% else %>
 			<%= f.submit 'Create Post', :class => 'btn btn-success', :id => 'save-article' %>
 		<% end %>
+
+		<%= yield :delete_post %>
 	</div>
 <% end %>

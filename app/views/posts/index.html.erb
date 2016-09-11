@@ -1,16 +1,12 @@
-<% if @posts.nil? or @posts.empty? %>
-	<p class="center">Sorry, there are no posts here.</p>
-<% else %>
-	<% @posts.each do |post| %>
-		<div class="post">
-			<div class="post-header align-right"> 
-				<%= link_to edit_post_path(post.id) do %> 
-					<span class="glyphicon glyphicon-pencil" style="float: left;"> </span> 
-				<% end %>
-				<em><%= post.updated_at.to_date.strftime("%v") %></em> 
-			</div>
-			<div class="center post-image"> <%= image_tag post.image, :class => "img-responsive" %><br> </div>
-			<div class="post-caption"> <%= post.caption %></div>
+<% @posts.each do |post| %>
+	<div class="post">
+		<div class="post-header align-right"> 
+			<%= link_to edit_post_path(post.id) do %> 
+				<span class="glyphicon glyphicon-pencil" style="float: left; padding: 5px;"> </span> 
+			<% end %>
+			<small><%= post.updated_at.to_date.strftime("%v") %></small> 
 		</div>
-	<% end %>
+		<div class="center"> <%= image_tag post.image, :class => "img-responsive" %><br> </div>
+		<div class="post-caption"> <%= post.caption %></div>
+	</div>
 <% end %>
