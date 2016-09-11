@@ -35,6 +35,10 @@ nav.navbar.navbar-fixed-top {
 	margin-bottom: 0;
 }
 
+.nav > li > a:hover {
+	background-color: #4abdac !important;
+}
+
 a.navbar-brand, a.dropdown, .nav>li>a {
 	color: white !important;
 }
