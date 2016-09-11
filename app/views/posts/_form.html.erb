@@ -1,0 +1,14 @@
+<%= bootstrap_form_for @post do |f|%> 
+	<div class="post" style="padding: 20px;">
+		<%= f.text_field :caption %>
+		<% if controller.action_name == "edit" %>
+			<div class="center post-image"> <%= image_tag @post.image, :class => "img-responsive" %><br> </div>
+		<% end %>
+		<%= f.file_field :image %>
+		<% if controller.action_name == "edit" %>
+			<%= f.submit 'Update Post', :class => 'btn btn-success', :id => 'save-article' %>
+		<% else %>
+			<%= f.submit 'Create Post', :class => 'btn btn-success', :id => 'save-article' %>
+		<% end %>
+	</div>
+<% end %>
